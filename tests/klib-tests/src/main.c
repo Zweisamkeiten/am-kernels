@@ -30,11 +30,13 @@ void check_eq(int l, int r, uint8_t val) {
 
 static const char *tests[256] = {
   ['w'] = "write test",
+  ['r'] = "read test",
 };
 
 int main(const char *args) {
   switch (args[0]) {
     CASE('w', test_write);
+    CASE('r', test_read);
     default:
       printf("Usage: make run mainargs=*\n");
       for (int ch = 0; ch < 256; ch++) {
