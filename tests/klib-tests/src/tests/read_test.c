@@ -32,6 +32,13 @@ void test_memcmp() {
       }
   }
 }
+
+void test_strlen() {
+  assert(strlen("foo") == 3);
+  assert(strlen("foobar") == 6);
+}
+
 void test_read() {
   test_memcmp();
+  test_strlen();
 }
