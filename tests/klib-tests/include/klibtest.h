@@ -6,8 +6,8 @@
 extern void (*entry)();
 extern uint8_t data[];
 void reset();
-void check_seq(int l, int r, int val);
-void check_eq(int l, int r, int val);
+void check_seq(int l, int r, uint8_t val);
+void check_eq(int l, int r, uint8_t val);
 
 #define CASE(id, entry_, ...) \
   case id: { \

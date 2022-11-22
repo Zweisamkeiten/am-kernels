@@ -13,7 +13,7 @@ void reset() {
 }
 
 // 检查[l,r)区间中的值是否依次为val, val + 1, val + 2...
-void check_seq(int l, int r, int val) {
+void check_seq(int l, int r, uint8_t val) {
   int i;
   for (i = l; i < r; i ++) {
     assert(data[i] == val + i - l);
@@ -21,7 +21,7 @@ void check_seq(int l, int r, int val) {
 }
 
 // 检查[l,r)区间中的值是否均为val
-void check_eq(int l, int r, int val) {
+void check_eq(int l, int r, uint8_t val) {
   int i;
   for (i = l; i < r; i ++) {
     assert(data[i] == val);
