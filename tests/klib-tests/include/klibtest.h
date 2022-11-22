@@ -2,6 +2,7 @@
 #include <klib.h>
 
 #define N 32
+#define LENGTH(arr)         (sizeof(arr) / sizeof((arr)[0]))
 
 extern void (*entry)();
 extern uint8_t data[];
