@@ -1,5 +1,5 @@
 #include <klibtest.h>
-#include <assert.h>
+// #include <assert.h>
 
 void (*entry)() = NULL; // mp entry
 

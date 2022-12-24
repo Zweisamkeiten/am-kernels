@@ -41,6 +41,16 @@ void test_sprintf() {
 
   sprintf(str, "%s%% %d", "Hello", 123);
   assert(strcmp("Hello% 123", str) == 0);
+
+  uintptr_t a = 0x0000000a00001800;
+  sprintf(str, "%lx\n", a);
+  printf("%lx\n", a);
+  uintptr_t b = 0xffffffffffffffff;
+  sprintf(str, "%lx\n", b);
+  printf("%lx\n", b);
+  uintptr_t c = 0x80012fc0;
+  printf("%lx\n", c);
+
 }
 
 void test_format_print() { test_sprintf(); }
