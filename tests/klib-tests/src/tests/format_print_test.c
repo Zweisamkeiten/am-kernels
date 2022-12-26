@@ -51,6 +51,9 @@ void test_sprintf() {
   uintptr_t c = 0x80012fc0;
   printf("%lx\n", c);
 
+   int x = 50;
+   int *ptr = &x;
+   printf("The address is: %p, the value is %d\n", ptr, *ptr);
 }
 
 void test_format_print() { test_sprintf(); }
