@@ -51,9 +51,15 @@ void test_sprintf() {
   uintptr_t c = 0x80012fc0;
   printf("%lx\n", c);
 
-   int x = 50;
-   int *ptr = &x;
-   printf("The address is: %p, the value is %d\n", ptr, *ptr);
+  int x = 50;
+  int *ptr = &x;
+  printf("The address is: %p, the value is %d\n", ptr, *ptr);
+
+  char buf[64];
+  assert(printf("%d", 1) == 1);
+  assert(printf("1") == 1);
+  assert(snprintf(buf, 1, "1") == 1);
+  assert(snprintf(buf, 3, "123") == 3);
 }
 
 void test_format_print() { test_sprintf(); }
